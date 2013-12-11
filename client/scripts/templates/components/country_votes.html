@@ -1,0 +1,8 @@
+<template name="country_votes">
+	{{#if selected_country_block}}
+		<input id="giveOne" type="button" class="inc btn btn-primary btn-lg btn-block" value="vote for {{selected_country_block}}!" />
+	{{else}}
+		<div class="none">Click a country to vote</div>
+	{{/if}}
+	<p style="text-align:center;"><a href="http://github.com/yozawiratama/">github</a></p>
+</template>
