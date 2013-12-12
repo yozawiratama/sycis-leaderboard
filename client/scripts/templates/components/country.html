@@ -1,7 +1,13 @@
 <template name="country">
 	<div class="country {{selected}}">
-		<label>{{name}}</label><br />
-		
-		{{votes}} votes! That are {{how_many}} 
+	<table>
+		<tr>
+			<td rowspan="2"><img src="{{country_flag_url}}" class="img-responsive img-flag" alt="{{name}}" /></td>
+			<td class="info"><label>{{name}}</label></td>
+		</tr>
+		<tr>
+			<td class="info"><span class="badge">{{votes}}</span> votes! That are {{how_many}} </td>
+		<tr/>
+	</table>
 	</div>
 </template>

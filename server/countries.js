@@ -12,7 +12,7 @@ Meteor.startup(function () {
                    "Cambodia",
 				   "Vietnam",
 				   "Laos",
-				   "Timor-Lestei",
+				   "Timor-Leste",
 				   "Thailand",
 				   "Philippine"
 				   ];

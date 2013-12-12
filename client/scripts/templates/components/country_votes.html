@@ -1,8 +1,12 @@
 <template name="country_votes">
+	<div class="none">
 	{{#if selected_country_block}}
-		<input id="giveOne" type="button" class="inc btn btn-primary btn-lg btn-block" value="vote for {{selected_country_block}}!" />
+		<button id="giveOne" class="inc btn btn-primary btn-lg btn-block">Vote for {{selected_country_block}}!</button>
 	{{else}}
-		<div class="none">Click a country to vote</div>
+		a country to vote
+		
 	{{/if}}
-	<p style="text-align:center;margin-top:3px;"><a href="https://github.com/yozawiratama/sycis-leaderboard/">view on github</a></p>
+	</div>
+	<p style="text-align:center;margin-top:3px;"><a href="https://github.com/yozawiratama/sycis-leaderboard/">View on github</a></p>
+	<p style="text-align:center;margin-top:3px;">V.0.4.5</p>
 </template>

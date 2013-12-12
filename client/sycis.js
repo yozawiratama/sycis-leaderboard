@@ -11,10 +11,11 @@ Template.country_votes.selected_country_block = function(){
     return country && country.name;
 };
 Template.country.selected = function(){
+	
 	return Session.equals("selected_country", this._id)? "selected":'';
 };
 Template.country_votes.events({
-	'click input#giveOne' : function(){
+	'click button#giveOne' : function(){
 		Countries.update(Session.get("selected_country"),{$inc: {votes: 1}});
 	}
 });
@@ -27,8 +28,22 @@ Template.country.how_many = function(){
 		return "Super Awesome!!!";
 		
 };
+Template.country.country_flag_url = function(){
+	if(this.name === "Indonesia") return "http://media-2.web.britannica.com/eb-media/48/1648-004-B85F0033.jpg";
+	if(this.name === "Malaysia") return "http://www.malaysiaworldexpo.com/img/malaysia_flag2.gif";
+	if(this.name === "Singapore") return "http://www.freeusandworldmaps.com/images/Flags_Images/Singapore-snflag.jpg";
+	if(this.name === "Brunei") return "http://www.blackberryempire.com/blog/wp-content/uploads/2010/12/brunei_flag.jpg";
+	if(this.name === "Laos") return "http://www.amnesty.org.nz/files/laos-flag.JPG";
+	if(this.name === "Cambodia") return "http://www.hotelblueriver.com/gallery/p/6/cambodia_flag.jpg";
+	if(this.name === "Timor-Leste") return "http://www.comminit.com/files/images/timor-leste_flag.jpg";
+	if(this.name === "Myanmar") return "http://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Myanmar-new.jpg";
+	if(this.name === "Vietnam") return "http://images3.wikia.nocookie.net/__cb20090517132302/uncyclopedia/images/2/24/Vietnam_Flag.jpg";
+	if(this.name === "Philippine") return "http://images.wikia.com/hetaliafanmadecharacters/images/a/a8/64180234-philippines-flag.jpg";
+	if(this.name === "Thailand") return "http://kenraggio.com/Thailand-Flag.png";
+};
 Template.country.events({
 	'click' : function(){
 		Session.set("selected_country", this._id);
 	}
 });
+
