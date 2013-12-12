@@ -10,10 +10,24 @@ body {
 	background-color: gray;
 }
 
+.header{
+	text-align: center;
+	background: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	color: gray;
+}
+
 .outer {
     background-color:white;  
 	padding: 20px 0px 30px;
-	margin-bottom: 110px;
+	margin-bottom: 50px;
+}
+.footer{
+	padding-top:10px;
+	border-top: 4px dashed lightgray;
+	margin-top: 3px;
 }
 
 .country {
@@ -57,7 +71,7 @@ body {
     border-color: #ccc;
     border-width: 4px;
 	margin: 5px 0 0 ;
-	padding: 5px 0 0;
+	padding: 5px 0 10px;
 }
 
 .none {
@@ -72,15 +86,19 @@ body {
 .tagline{
 	color: white;
 	text-align: center;
-	font-size: 22px;
+	font-size: 24px;
 	margin-top: 75px;
+}
+.tagline .sub{
+	font-size: 13px;
+	
 }
 .leaderboard{
 	margin:0px 0px 10px 0px;
 	
 }
 
-#footer{
+#footbar{
 	position: fixed;
 	bottom: 0;
 	width: 100%;

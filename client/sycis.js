@@ -20,12 +20,12 @@ Template.country_votes.events({
 	}
 });
 Template.country.how_many = function(){
-		if(!this.votes) return "no";
-		if(this.votes < 50) return "a few";
-		if(this.votes < 200) return "some";
-		if(this.votes < 500) return "a lot of";
-		if(this.votes < 1000) return "amazing";
-		return "Super Awesome!!!";
+	if(!this.votes) return "no";
+	if(this.votes < 50) return "a few";
+	if(this.votes < 200) return "some";
+	if(this.votes < 500) return "a lot of";
+	if(this.votes < 1000) return "amazing";
+	return "Super Awesome!!!";
 		
 };
 Template.country.country_flag_url = function(){
@@ -41,6 +41,18 @@ Template.country.country_flag_url = function(){
 	if(this.name === "Philippine") return "http://images.wikia.com/hetaliafanmadecharacters/images/a/a8/64180234-philippines-flag.jpg";
 	if(this.name === "Thailand") return "http://kenraggio.com/Thailand-Flag.png";
 };
+Template.country.votes_value_max = function(){
+	if(this.votes < 50) return "50";
+	if(this.votes < 200) return "200";
+	if(this.votes < 500) return "500";
+	if(this.votes < 1000) return "1000";
+};
+Template.country.votes_progress_width = function(){
+	if(this.votes < 50) return this.votes/50*100+"%";
+	else if(this.votes < 200) return this.votes/200*100+"%";
+	else if(this.votes < 500) return this.votes/500*100+"%";
+	else if(this.votes < 1000) return this.votes/1000*100+"%";
+}
 Template.country.events({
 	'click' : function(){
 		Session.set("selected_country", this._id);

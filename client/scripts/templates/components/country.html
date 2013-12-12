@@ -1,13 +1,22 @@
 <template name="country">
 	<div class="country {{selected}}">
-	<table>
+	<table style="width: 100%;">
 		<tr>
-			<td rowspan="2"><img src="{{country_flag_url}}" class="img-responsive img-flag" alt="{{name}}" /></td>
+			<td rowspan="3" style="width: 91px;"><img src="{{country_flag_url}}" class="img-responsive img-flag" alt="{{name}}" /></td>
 			<td class="info"><label>{{name}}</label></td>
 		</tr>
 		<tr>
 			<td class="info"><span class="badge">{{votes}}</span> votes! That are {{how_many}} </td>
-		<tr/>
+		</tr>
+		<tr>
+			<td class="info">
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="{{votes}}" aria-valuemin="0" aria-valuemax="{{votes_value_max}}" style="width: {{votes_progress_width}};">
+						<span class="sr-only">60% Complete</span>
+					</div>
+				</div>
+			</td>
+		</tr>
 	</table>
 	</div>
 </template>
